@@ -1,0 +1,13 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def mult(a, b):
+    return a * b
+
+a = int(input('Number of shares: '))
+b = int(input('Cost per share: '))
+c = str(input('Name of share: '))
+
+result = mult(a, b)
+
+print(f'Total investment for {c} is {result}')

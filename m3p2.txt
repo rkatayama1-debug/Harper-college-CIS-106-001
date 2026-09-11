@@ -1,0 +1,13 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def mult(a, b):
+    return (a * .4) + (b * .6) 
+
+a = int(input('Score of midterm: '))
+b = int(input('Score of final exam: '))
+c = str(input('Name of Student: '))
+
+result = mult(a, b)
+
+print(f'Student name: {c} Final grade is {result}')

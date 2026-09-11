@@ -1,0 +1,14 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def mult( c, d):
+    return c - (c * d)  
+
+a = str(input('Make: '))
+b = str(input('Model: '))
+c = int(input('MSRP: '))
+d = float(input('Discount Percentage: '))
+
+result = mult( c, d)
+
+print(f'Make: {a} \nModel: {b} \nMSRP: $ {c} \nYour Discount percentage is {d} so your discounted final price will be : $ {result}')

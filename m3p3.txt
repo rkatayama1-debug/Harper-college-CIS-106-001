@@ -1,0 +1,11 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def split(a):
+    return a / 3
+
+a = int(input('Amount recieved: '))
+
+result = split(a)
+
+print(f'Amount recieved: {a} , The equal share among the three is: {result}')

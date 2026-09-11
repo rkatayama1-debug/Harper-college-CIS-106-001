@@ -1,0 +1,16 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def area( a):
+    return 3.14 * (a * a)
+
+def perim( a):
+    return 2 * 3.14 * a 
+
+a = int(input('radius: '))
+
+area = area( a)
+
+perimeter = perim( a)
+
+print(f'Your area is: {area} \nYour perimeter is: {perimeter} ')
