@@ -1,0 +1,12 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def calb(es):
+    return es * .25
+
+fn = input('First name: ')
+es = int(input('each step: '))
+
+result = calb(es)
+
+print(f'Your first name: {fn}\nThe amount of steps you took today: {es}\nYour total calories burned is {result}')

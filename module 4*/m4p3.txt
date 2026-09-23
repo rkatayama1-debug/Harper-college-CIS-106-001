@@ -1,0 +1,19 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def tot(mt, t):
+    pass
+
+mt = float(input('meal total: '))
+t15 = mt * .15
+t18 = mt * .18
+t20 = mt * .20
+mt15 = mt + t15
+mt18 = mt + t18
+mt20 = mt + t20
+
+print(f'With %15 tip:\n\nTotal: {mt:.2f}\nTip: {t15:.2f}\nTotal with tip {mt15:.2f}\n\n')
+
+print(f'With 18% tip:\n\nTotal: {mt:.2f}\nTip: {t18:.2f}\nTotal with tip {mt18:.2f}\n\n ')
+
+print(f'With 20% tip:\n\nTotal: {mt:.2f}\nTip: {t20:.2f}\nTotal with tip {mt20:.2f}')
