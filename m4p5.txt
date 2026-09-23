@@ -1,0 +1,14 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def bep(fc, ppu, cpu):
+    return fc/(ppu - cpu)
+
+fc = float(input('fixed costs: '))
+ppu = float(input('price per unit: '))
+cpu = float(input('cost per unit: '))
+
+
+result = bep(fc, ppu, cpu)
+
+print(f'Your fixed costs will be: {fc}\nYour price per unit will be: {ppu}\nYour cost per unit will be: {cpu}\n\nYour break even point will be: {result}')

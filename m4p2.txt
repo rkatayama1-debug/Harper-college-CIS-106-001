@@ -1,0 +1,15 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def calc(ppps, qos, csp):
+    return (csp - ppps) * qos
+
+ppps = float(input('Purchase price per share: '))
+csp = float(input('Current stock price: '))
+qos = int(input('Quantity of stock: '))
+
+result = calc(ppps, qos, csp)
+
+print(f'Your Purchse price per share is {ppps}. Your Current stock price is  {csp} . Your Quantity of stock is {qos}')
+
+print(f' Your total value for your stock is {result}')
