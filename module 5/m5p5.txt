@@ -1,0 +1,23 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def determineTax(grossincome):
+    tax = 0
+    if (grossincome>50000.00):
+        tax = (.2 * grossincome)
+    else:
+        tax = (.1 * grossincome)
+    if ( tax <0 ):
+        return (100.00)
+    else:
+        return tax
+
+lstname = str(input('last name:'))
+nodep = int(input('number of dependents:'))
+grincome = float(input('gross income:'))
+agincome = (grincome) - (nodep) * 12000.00
+tax = determineTax(agincome)
+
+print(f'Display last name: {lstname}\nDisplay gross income: ${grincome:.2f}\nNumber of dependents: {nodep}')
+
+print(f'Adjusted gross income: ${agincome:.2f}\nIncome tax: ${tax:.2f}')

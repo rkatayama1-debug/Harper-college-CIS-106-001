@@ -1,0 +1,18 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def GetUnitPrice(q):
+    if (q>=1000):
+        return (3.00)
+    else:
+        return (5.00)
+
+quantity = int(input('Quantity of item: '))
+unitprice = GetUnitPrice(quantity)
+extprice = (unitprice) * (quantity)
+tax = 0.07 * (extprice)
+totprice = (extprice) + (tax)
+
+print(f'Your quantity is {quantity}\nYour unit price will be: ${unitprice}')
+
+print(f'Your Extended price will be: ${extprice}\nYour tax will be: ${tax:.2f}\nYour total will be: ${totprice}')

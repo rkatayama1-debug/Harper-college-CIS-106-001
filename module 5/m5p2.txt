@@ -1,0 +1,17 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def getUnitPrice(i):
+    if (i=="A"):
+        return (10.00)
+    else:
+        return (20.00)
+
+item = str(input('item name:'))
+quantity = int(input('number of items:'))
+unitprice = getUnitPrice(item)
+extprice = (quantity) * (unitprice)
+
+print(f'The item you have chosen is: {item}\nYour unit price of the item you selected is: ${unitprice:.2f}')
+
+print(f'Your extended price will be: ${extprice:.2f}')

@@ -1,0 +1,17 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+def determinewarrantycost(cost):
+    if (cost >1000.00):
+        return (.1 * cost)
+    else:
+        return (.05 * cost)
+
+noapp = str(input('name of appliance:'))
+coapp = float(input('cost of appliance:'))
+wcost = determinewarrantycost(coapp)
+totalcost = (coapp) + (wcost)
+
+print(f'Name of appliance: {noapp}\nCost of appliance: {coapp:.2f}\nCost of warranty: {wcost:.2f}')
+
+print(f'Total cost: {totalcost:.2f}')
