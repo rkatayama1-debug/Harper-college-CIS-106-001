@@ -1,0 +1,22 @@
+
+
+def calculate_price(quantity):
+    if quantity >= 25:
+        price = 50
+    elif quantity >= 10:
+        price = 60
+    elif quantity >= 5:
+        price = 70
+    else:
+        price = 75
+
+    return price
+
+quantity = int(input('Enter number of concert tickets: '))
+
+price = calculate_price(quantity)
+totalCost = quantity * price
+
+print(f'Number of tickets: {quantity:>8}')
+print(f'Price per ticket:  ${price:>8.2f}')
+print(f'Total cost:        ${totalCost:>8.2f}')

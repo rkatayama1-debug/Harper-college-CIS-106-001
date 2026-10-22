@@ -1,0 +1,22 @@
+
+def calculate_bonus(level):
+    if level >= 10:
+        rate = 0.25
+    elif level >= 5:
+        rate = 0.20
+    else:
+        rate = 0.10
+
+    return rate
+
+lastName = input('Enter employee last name: ')
+salary = float(input('Enter salary: $'))
+level = int(input('Enter job level: '))
+
+rate = calculate_bonus(level)
+bonus = salary * rate
+
+print(f'Employee last name: {lastName}')
+print(f'Bonus: ${bonus:.2f}')
+
+

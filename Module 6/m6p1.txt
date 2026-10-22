@@ -1,0 +1,22 @@
+
+def calculate_price(quantity):
+    if quantity > 10000:
+        price = 10
+    elif quantity >= 5000:
+        price = 20
+    else:
+        price = 30
+
+
+    return price
+
+quantity = int(input('Enter quantity of widgets: '))
+
+price = calculate_price(quantity)
+extendedPrice = quantity * price
+tax = price * 0.07
+total = extendedPrice + tax
+
+print(f'Extended price:     ${extendedPrice: >10.2f}')
+print(f'Tax amount:         ${tax: >10.2f}')
+print(f'Total:              ${total: >10.2f}')

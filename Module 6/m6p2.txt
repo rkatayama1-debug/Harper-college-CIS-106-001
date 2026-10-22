@@ -1,0 +1,22 @@
+
+def calculate_price(item):
+    if item == '10' or item == '55':
+        price = 1.00
+    elif item == '99':
+        price = 2.00
+    elif item == '80' or item == '70':
+        price = 3.00
+    else:
+        price = 5.00
+
+    return price
+
+item = input('Enter part number: ')
+quantity = int(input('Enter quantity: '))
+
+price = calculate_price(item)
+totalCost = quantity * price
+
+print(f'Part number:  {item}')
+print(f'Cost per unit: ${price:>8.2f}')
+print(f'Total cost:    ${totalCost:>8.2f}')
