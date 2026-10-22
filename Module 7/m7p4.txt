@@ -1,0 +1,32 @@
+
+answer = input('Do you want to enter employee data? (Yes/No): ')
+
+totalPay = 0
+count = 0
+
+while answer.strip().lower() == 'yes':
+    lastName = input('Enter employee last name: ')
+    hours = float(input('Enter hours worked: '))
+    rate = float(input('Enter rate of pay: $'))
+
+    if hours > 40:
+        grossPay = (40 * rate) + ((hours - 40) * rate * 1.5)
+    else:
+        grossPay = hours * rate
+
+    print(f'Employee last name: {lastName}')
+    print(f'Gross pay:           ${grossPay:>10,.2f}')
+
+    totalPay = totalPay + grossPay
+    count = count + 1
+
+    answer = input('Do you want to enter another employee? (Yes/No): ')
+
+print(f'Total gross pay:      ${totalPay:>10,.2f}')
+print(f'Number of employees:  {count}')
+
+if count > 0:
+    averagePay = totalPay / count
+    print(f'Average pay:          ${averagePay:>10,.2f}')
+else:
+    print('Average pay: $0.00')

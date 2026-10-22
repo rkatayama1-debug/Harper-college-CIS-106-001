@@ -1,0 +1,19 @@
+
+answer = input('Do you want to enter student data? (Yes/No): ')
+count = 0
+
+while answer.strip().lower() == 'yes':
+    lastName = input('Enter student last name: ')
+    exam1 = float(input('Enter first exam score: '))
+    exam2 = float(input('Enter second exam score: '))
+
+    average = (exam1 + exam2) / 2
+
+    print(f'Last name: {lastName}')
+    print(f'Average exam score: {average:.2f}')
+
+    count = count + 1
+
+    answer = input('Do you want to enter another student? (Yes/No): ')
+
+print(f'Number of students who entered data: {count}')

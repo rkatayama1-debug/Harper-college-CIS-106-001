@@ -1,0 +1,28 @@
+
+answer = input('Do you want to enter order data? (Yes/No): ')
+
+totalDiscount = 0
+
+while answer.strip().lower() == 'yes':
+    quantity = int(input('Enter quantity: '))
+    price = float(input('Enter price per item: $'))
+
+    extendedPrice = quantity * price
+
+    if extendedPrice > 10000:
+        discountRate = 0.25
+    else:
+        discountRate = 0.10
+
+    discount = extendedPrice * discountRate
+    total = extendedPrice - discount
+
+    print(f'Extended price:  ${extendedPrice:>10,.2f}')
+    print(f'Discount amount: ${discount:>9,.2f}')
+    print(f'Total:           ${total:>10,.2f}')
+
+    totalDiscount = totalDiscount + discount
+
+    answer = input('Do you want to enter another order? (Yes/No): ')
+
+print(f'Total discounts: ${totalDiscount:,.2f}')
