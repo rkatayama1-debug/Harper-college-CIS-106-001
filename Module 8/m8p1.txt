@@ -1,0 +1,22 @@
+
+principal = float(input('Enter principal amount: '))
+rate = float(input('Enter interest rate: '))
+
+year = 1
+totalInterest = 0
+
+print(f'\n{"Year":<6}{"Beginning Balance":>20}{"Ending Balance":>20}')
+
+while year <= 5:
+    beginningBalance = principal
+    interest = beginningBalance * rate
+    endingBalance = beginningBalance + interest
+    beginningBalanceString = "$" + "{:,.2f}".format(beginningBalance)
+    endingBalanceString = "$" + "{:,.2f}".format(endingBalance)
+    print(f'{year:<6}{beginningBalanceString:>19}{"":<5}{endingBalanceString:>19}')
+    totalInterest = totalInterest + interest
+    principal = endingBalance
+    year = year + 1
+
+
+print(f'Total: ${totalInterest:,.2f}')

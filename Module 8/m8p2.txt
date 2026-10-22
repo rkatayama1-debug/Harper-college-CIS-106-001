@@ -1,0 +1,13 @@
+
+first = 1
+second = 1
+
+print(first)
+print(second)
+
+for number in range(3, 21):
+    nextNumber = first + second
+    print(nextNumber)
+
+    first = second
+    second = nextNumber

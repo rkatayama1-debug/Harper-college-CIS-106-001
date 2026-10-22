@@ -1,0 +1,31 @@
+totalBonus = 0
+
+file = open('employees.txt', 'r')
+
+while True:
+    lastName = file.readline().strip()
+
+    if lastName == '':
+        break
+
+    salary = float(file.readline())
+
+    if salary >= 100000:
+        bonusRate = 0.20
+    elif salary >= 50000:
+        bonusRate = 0.15
+    else:
+        bonusRate = 0.10
+
+    bonus = salary * bonusRate
+
+    salaryString = "$" + "{:,.2f}".format(salary)
+    bonusString = "$" + "{:,.2f}".format(bonus)
+
+    print(f'{lastName:<12}{salaryString:>12}{bonusString:>12}')
+
+    totalBonus = totalBonus + bonus
+
+file.close()
+
+print(f'\nTotal bonuses paid: ${totalBonus:,.2f}')

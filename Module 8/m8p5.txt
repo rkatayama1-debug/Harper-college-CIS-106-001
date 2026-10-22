@@ -1,0 +1,32 @@
+totalTuition = 0
+count = 0
+
+file = open('students.txt', 'r')
+
+while True:
+    lastName = file.readline().strip()
+
+    if lastName == '':
+        break
+
+    districtCode = file.readline().strip()
+    credits = int(file.readline())
+
+    if districtCode == 'I':
+        costPerCredit = 250.00
+    else:
+        costPerCredit = 500.00
+
+    tuition = credits * costPerCredit
+
+    tuitionString = "$" + "{:,.2f}".format(tuition)
+
+    print(f'{lastName:<12}{credits:>8}{tuitionString:>15}')
+
+    totalTuition = totalTuition + tuition
+    count = count + 1
+
+file.close()
+
+print(f'\nTotal tuition owed: ${totalTuition:,.2f}')
+print(f'Number of students: {count}')
